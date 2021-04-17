@@ -1,78 +1,35 @@
 body {
   font-family: 'Comic Sans', Helvetica, Helvetica Neue, sans-serif;
+}
+
+#main, h1 {
   text-align: center;
 }
 
-h1, h2, h3 {
-  font-weight: 300;
-}
+
 
 h1 {
+  font-weight: 300;
   font-size: 72px;
+  color: #540468;
 }
 
-h3 {
-  text-decoration: underline;
-  color: #2196F3;
-  font-size: 2em;
-}
-
-h4 {
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-style: italic;
-}
-
-ul {
-  text-align: left;
+.counter {
   width: 300px;
-  /*  center it */
   margin: auto;
-  margin-bottom: 20px;
-  border: solid 3px #a66a45;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  border: solid 3px #540468;
 }
 
-ul code {
-  display: block;
+td {
+  border: 1px solid #540468;
 }
 
-li {
-  margin-bottom: 15px;
-  margin-right: 40px;
-  color: #666;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-code {
-  padding: 5px;
-  display: inline-block;
-  background: #cef3ff;
-  color: black;
-  margin-bottom: 6px;
-}
-
-#dancing-bear {
-  width: 250px;
-  margin-bottom: 10px;
-}
-
-.glow {
-  background-color: #FFEB3B;
-  color: #009688;
-  font-weight: bold;
-  letter-spacing: 2px;
-  padding: 0 15px;
-}
-
-.stylish {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.5em;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.content {
-  margin-top: 60px;
-  margin-bottom: 100px;
+thead {
+    background-color: #540468;
+    color: #fff;
 }
