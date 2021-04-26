@@ -1,12 +1,34 @@
-console.log('Hello! I am client.js inside client/js/...');
-console.log('...This comment is on line 2 of client.js');
+$(document).ready(function(){
 
-// Insert the 'Hey there!' text on the template page
-document.getElementById('greeting').innerText = 'Smartlink ICO dashboard';
+    const interval = setInterval(function() {
+        getdata();
+    }, 5000);
+    getdata();
 
-let x = document.querySelectorAll(".amount");
-        for (let i = 0, len = x.length; i < len; i++) {
-            let num = Number(x[i].innerHTML)
-                      .toLocaleString('en');
-            x[i].innerHTML = num;
-        }
+    function getdata(){  
+        $.ajax({  
+            url:'/task/getdata',  
+            method:'get',  
+            dataType:'json',  
+            success:function(response){
+                console.log(response.msg);
+                    if(response.msg=='success'){  
+                        $('#last_update').html(new Date());
+                        console.log(response.d1);
+                        $('#validated').html(response.d1);
+                        $('#validated_and_pending').html(response.d2);
+                        $('#all_funds').html(response.d3);
+                        let x = document.querySelectorAll(".amount");
+                        for (let i = 0, len = x.length; i < len; i++) {
+                            let num = Number(x[i].innerHTML)
+                                    .toLocaleString('en');
+                            x[i].innerHTML = num + "<span>&#36;</span>";
+                        }
+                    }  
+            },  
+            error:function(response){  
+                alert('server error');
+            }  
+        });  
+    }
+});  

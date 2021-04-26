@@ -4,9 +4,10 @@
     <title>My Awesome Website Title</title>
     <link type="text/css" rel="stylesheet" href="/css/client.css" />
     <link type="image/x-icon" rel="icon" href="favicon.ico">
+    <script src="/jquery/jquery.js"></script>
   </head>
   <body>
-    <h1><em id="greeting"></em></h1>
+    <h1><em id="greeting">Smartlink ICO dashboard</em></h1>
    
 
     <div id="main">
@@ -15,7 +16,7 @@
         <h3>Validated funds</h3>
         <p><i>(User KYC passed + funds received and confirmed)</i></p>
         <div class="counter">
-          <p style="font-weight: bold;"><span id="validated" class="amount"></span><span>&#36;</span></p>
+          <p style="font-weight: bold;"><span id="validated" class="amount"></span></p>
         </div>
       </div>
     
@@ -23,89 +24,21 @@
         <h3>Validated + pending funds</h3>
         <p><i>(User KYC passed, funds received but without enough block confirmations)</i></p>
         <div class="counter">
-          <p style="font-weight: bold;"><span id="validated_and_pending" class="amount"></span><span>&#36;</span></p>
+          <p style="font-weight: bold;"><span id="validated_and_pending" class="amount"></span></p>
         </div>
       </div>
+
+      <div class="counter_block">
+        <h3>All funds</h3>
+        <p><i>(Validated + pending funds + no KYC)</i></p>
+        <div class="counter">
+          <p style="font-weight: bold;"><span id="all_funds" class="amount"></span></p>
+        </div>
+      </div>
+
       <p>Stats last updated : <span id="last_update"></span></p>
-      <p>3 last calls to the stats API :</p>
-      <ul style="list-style-type:none;">
-        <li><i><span id="date1"></span><span id="status1"></span></i></li>
-        <li><i><span id="date2"></span><span id="status2"></span></i></li>
-        <li><i><span id="date3"></span><span id="status3"></span></i></li>
-      </ul>
     </div>
 
-    
-  
-    
-
-    <div>
-      <h3>Validated funds</h3>
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Number of transactions</th>
-            <th>Amount in tokens</th>
-            <th>Amount in <span>&#36;</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>BTC</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>ETH</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>XTZ</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div>
-      <h3>Pending funds</h3>
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Number of transactions</th>
-            <th>Amount in tokens</th>
-            <th>Amount in <span>&#36;</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>BTC</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>ETH</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>XTZ</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
     
     <script src="/js/client.js"></script>
   </body>

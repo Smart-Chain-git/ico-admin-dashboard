@@ -2,7 +2,7 @@ body {
   font-family: 'Comic Sans', Helvetica, Helvetica Neue, sans-serif;
 }
 
-#main, h1 {
+#main, h1, td {
   text-align: center;
 }
 

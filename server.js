@@ -1,21 +1,28 @@
-var http = require('http');
-var path = require('path');
+var express     = require('express');
+var path        = require('path');
+var $           = require('jquery');
 
-var express = require('express');
 
-//
-// ## SimpleServer `SimpleServer(obj)`
-//
-// Creates a new instance of SimpleServer with the following options:
-//  * `port` - The HTTP port to listen on. If `process.env.PORT` is set, _it overrides this value_.
-//
-var router = express();
-var server = http.createServer(router);
+//init app  
+var app = express();  
 
-router.use(express.static(path.resolve(__dirname, 'client')));
+//fetch data from the request  
+app.use(express.urlencoded({extended:false}));  
 
-console.log('Booting up the server! Please wait until finished...')
-server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
-  var addr = server.address();
-  console.log("All ready! Server listening at", addr.address + ":" + addr.port);
-});
+//set the path of the jquery file to be used from the node_module jquery package  
+app.use('/jquery',express.static(path.join(__dirname+'/node_modules/jquery/dist/')));  
+
+//set static folder(public) path  
+app.use(express.static(path.join(__dirname+'/client')));  
+
+//default page load  
+app.get('/',(req,res)=>{  
+  res.redirect('/task/home');  
+});  
+
+//routes  
+app.use('/task',require('./routes/taskroute'));  
+
+//assign port  
+var port  = process.env.PORT || 3000;  
+app.listen(port,()=>console.log('server run at port '+port));

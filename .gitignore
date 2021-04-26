@@ -1,2 +1,12 @@
 node_modules
 package-lock.json
+.DS_Store
+
+# local env files
+*.env
+!development.env
+!template.env
+local.env
+prod.env
+*.env.local
+*.env.*.local

@@ -5,28 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amyhua/basic-website-template-node.git"
-  },
-  "keywords": [
-    "Girls",
-    "Who",
-    "Code",
-    "website",
-    "template",
-    "node"
-  ],
   "author": "YOUR NAME GOES HERE",
-  "bugs": {
-    "url": "https://github.com/amyhua/basic-website-template-node/issues"
-  },
-  "homepage": "https://github.com/amyhua/basic-website-template-node#readme",
   "dependencies": {
-    "express": "^4.14.0",
-    "http": "0.0.0",
-    "nodemon": "^1.11.0"
+    "axios": "^0.21.1",
+    "cron": "^1.8.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "mysql2": "^2.2.5"
   }
 }
