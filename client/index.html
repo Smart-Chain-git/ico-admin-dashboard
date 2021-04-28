@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Awesome Website Title</title>
+    <title>Smartlink ICO dashboard</title>
     <link type="text/css" rel="stylesheet" href="/css/client.css" />
     <link type="image/x-icon" rel="icon" href="favicon.ico">
     <script src="/jquery/jquery.js"></script>
@@ -22,7 +22,7 @@
     
       <div class="counter_block">
         <h3>Validated + pending funds</h3>
-        <p><i>(User KYC passed, funds received but without enough block confirmations)</i></p>
+        <p><i>(Pending = User KYC passed, funds received but without enough block confirmations)</i></p>
         <div class="counter">
           <p style="font-weight: bold;"><span id="validated_and_pending" class="amount"></span></p>
         </div>
@@ -37,6 +37,40 @@
       </div>
 
       <p>Stats last updated : <span id="last_update"></span></p>
+    </div>
+
+    <div>
+      <h3>SMAK allocation</h3>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Pre-sale</th>
+            <th>ICO</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Reserved</td>
+            <td id="presale_reserved" class="smak"></td>
+            <td id="ico_reserved" class="smak"></td>
+            <td id="total_reserved" class="smak"></td>
+          </tr>
+          <tr>
+            <td>Remaining</td>
+            <td id="presale_remaining" class="smak"></td>
+            <td id="ico_remaining" class="smak"></td>
+            <td id="total_remaining" class="smak"></td>
+          </tr>
+          <tr style="font-weight: bold;">
+            <td>TOTAL</td>
+            <td>71,432,562</td>
+            <td>200,000,000</td>
+            <td>271,432,562</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     
